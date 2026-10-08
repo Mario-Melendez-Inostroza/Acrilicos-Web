@@ -144,3 +144,7 @@
 *.stl                filter=lfs diff=lfs merge=lfs -text
 *.nc                 filter=lfs diff=lfs merge=lfs -text
 *.mat                filter=lfs diff=lfs merge=lfs -text
+
+# Imagenes que sirve el sitio: archivos normales de git (NO LFS). Vercel no descarga LFS y
+# publicaria el texto del puntero (~130 bytes) en vez de la imagen.
+public/** -filter -diff -merge -text

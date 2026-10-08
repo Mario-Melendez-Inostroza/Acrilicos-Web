@@ -20,7 +20,7 @@ export default function Footer() {
     <footer className="bg-ink text-white">
       <div className="container-x grid gap-10 py-10 sm:grid-cols-2 lg:grid-cols-[1.6fr_0.8fr_1fr_1.2fr_auto]">
         <div>
-          <img src="/logo.png" alt="Visionary Enterprises" className="h-[clamp(64px,5vw,96px)] w-auto object-contain" />
+          <img src="/images/logo.png" alt="Visionary Enterprises" className="h-[clamp(64px,5vw,96px)] w-auto object-contain" />
           <p className="mt-4 max-w-[260px] text-[12.5px] leading-relaxed text-white/80">{site.tagline}</p>
         </div>
         <nav aria-label="Enlaces rápidos">

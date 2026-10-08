@@ -43,21 +43,21 @@ export const categories: CategoryInfo[] = [
     id: 'lamicoid',
     name: 'Lamicoid (ABS Doble Color)',
     description: '9 variedades disponibles',
-    image: '/img/categoria-lamicoid.png',
+    image: '/images/categoria-lamicoid.webp',
     alt: 'Pila de planchas de Lamicoid ABS doble color en negro, amarillo, rojo, azul, verde, dorado, plateado y cobre',
   },
   {
     id: 'transparente',
     name: 'Acrílico Transparente',
     description: 'Desde 2mm a 10mm',
-    image: '/img/categoria-acrilico-transparente.png',
+    image: '/images/categoria-acrilico-transparente.webp',
     alt: 'Planchas de acrílico transparente apiladas de distintos espesores',
   },
   {
     id: 'colores',
     name: 'Acrílicos de Colores',
     description: 'Gran variedad de colores',
-    image: '/img/categoria-acrilicos-colores.png',
+    image: '/images/categoria-acrilicos-colores.webp',
     alt: 'Planchas de acrílico de colores translúcidos apiladas en degradé',
   },
 ]
@@ -102,7 +102,7 @@ export const products: Product[] = [
     category: 'transparente',
     description: 'Plancha de acrílico transparente de alta claridad. Elige el espesor que necesita tu proyecto.',
     dimensions: '2440 x 1220 mm',
-    image: '/img/categoria-acrilico-transparente.png',
+    image: '/images/categoria-acrilico-transparente.webp',
     variantType: 'thickness',
     variants: [
       { id: '2mm', label: '2 mm', price: 3000, isTestPrice: true },
@@ -122,7 +122,7 @@ export const products: Product[] = [
     category: 'colores',
     description: 'Plancha de acrílico de color de 3 mm. Elige el color para tu proyecto.',
     dimensions: '2440 x 1220 x 3 mm',
-    image: '/img/categoria-acrilicos-colores.png',
+    image: '/images/categoria-acrilicos-colores.webp',
     variantType: 'color',
     // PLACEHOLDER: reemplazar por los colores reales disponibles
     variants: [

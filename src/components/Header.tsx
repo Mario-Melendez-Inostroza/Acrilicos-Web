@@ -99,7 +99,7 @@ export default function Header() {
           {menu ? <X className="size-6" /> : <Menu className="size-6" />}
         </button>
         <a href="#/" onClick={(e) => { e.preventDefault(); nav('inicio') }} className="shrink-0" aria-label="Visionary Enterprises, inicio">
-          <img src="/logo.png" alt="Visionary Enterprises" className="h-[clamp(56px,5vw,96px)] w-auto object-contain" />
+          <img src="/images/logo.png" alt="Visionary Enterprises" className="h-[clamp(56px,5vw,96px)] w-auto object-contain" />
         </a>
         <nav aria-label="Principal" className="ml-auto hidden h-full items-center gap-6 lg:flex xl:ml-12 xl:gap-8 2xl:ml-24 2xl:gap-10">
           {LINKS.map((l) => (

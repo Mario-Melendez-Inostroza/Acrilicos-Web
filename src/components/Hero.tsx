@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section id="inicio" className="relative isolate flex min-h-[calc(100svh-var(--header-h))] items-center overflow-hidden bg-[#0b0b0c] text-white">
       <img
-        src="/img/hero-fondo.png"
+        src="/images/hero-fondo.webp"
         alt="Planchas de acrílico y ABS de colores apiladas sobre una superficie oscura"
         className="hero-bg-img -z-20"
       />
