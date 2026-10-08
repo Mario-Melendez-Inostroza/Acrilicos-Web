@@ -20,8 +20,8 @@ export default function ProductCard({ product }: { product: Product }) {
   return (
     <article className="group flex h-full flex-col rounded-xl bg-white p-3 shadow-[0_2px_14px_-4px_rgb(0_0_0/0.12)] ring-1 ring-black/5 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_22px_40px_-18px_rgb(0_0_0/0.3)]">
       <button onClick={() => go(`#/producto/${product.id}`)} className="block overflow-hidden rounded-lg bg-white" aria-label={`Ver detalle de ${product.name}`}>
-        <div className="flex aspect-[1.45/1] items-center justify-center px-1 transition-transform duration-700 group-hover:scale-[1.05]">
-          <ProductImage product={product} className={product.crop ? '' : 'h-full rounded-md'} />
+        <div className="aspect-[4/3] bg-white p-4 transition-transform duration-700 group-hover:scale-[1.05]">
+          <ProductImage product={product} className={'h-full rounded-md'} />
         </div>
       </button>
       <div className="flex flex-1 flex-col px-1 pt-3">

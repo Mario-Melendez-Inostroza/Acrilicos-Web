@@ -42,7 +42,7 @@ export default function CartDrawer() {
                 return (
                   <li key={l.lineId} className="flex gap-4 py-5">
                     <div className="grid w-20 shrink-0 place-items-center overflow-hidden rounded-lg bg-mist p-1">
-                      {p && <ProductImage product={p} className={p.crop ? '' : 'aspect-square rounded-md'} />}
+                      {p && <ProductImage product={p} className={'aspect-square rounded-md bg-white'} />}
                     </div>
                     <div className="flex min-w-0 flex-1 flex-col">
                       <div className="flex items-start justify-between gap-2">

@@ -21,8 +21,6 @@ export interface Product {
   description: string
   dimensions: string
   image: string
-  /** Recorte dentro de la imagen de catálogo (px sobre 1536x1024) */
-  crop?: { x: number; y: number }
   /** Color representativo (punto de color) */
   color?: string
   variantType: VariantType
@@ -66,17 +64,12 @@ export const categories: CategoryInfo[] = [
 
 const LAMICOID_DESC =
   'Plancha de ABS doble color (Lamicoid), ideal para señalética, placas, credenciales y grabado.'
-const CATALOG = '/img/catalogo-lamicoid.png'
-const COLS = [30, 537, 1044]
-const ROWS = [12, 352, 692]
 
 const lamicoid = (
   slug: string,
   name: string,
   color: string,
   price: number,
-  col: number,
-  row: number,
 ): Product => ({
   id: `lamicoid-${slug}`,
   slug: `lamicoid-${slug}`,
@@ -84,8 +77,7 @@ const lamicoid = (
   category: 'lamicoid',
   description: LAMICOID_DESC,
   dimensions: '1200 x 600 x 1,3 mm',
-  image: CATALOG,
-  crop: { x: COLS[col], y: ROWS[row] },
+  image: `/images/products/lamicoid-${slug}.png`,
   color,
   variantType: 'none',
   variants: [],
@@ -94,15 +86,15 @@ const lamicoid = (
 })
 
 export const products: Product[] = [
-  lamicoid('negro-sobre-blanco', 'Negro sobre Blanco', '#111111', 1500, 0, 0),
-  lamicoid('amarillo-sobre-negro', 'Amarillo sobre Negro', '#F7D400', 1500, 1, 0),
-  lamicoid('rojo-sobre-blanco', 'Rojo sobre Blanco', '#E30613', 1500, 2, 0),
-  lamicoid('azul-sobre-blanco', 'Azul sobre Blanco', '#0A3CC8', 1500, 0, 1),
-  lamicoid('blanco-sobre-negro', 'Blanco sobre Negro', '#FFFFFF', 1500, 1, 1),
-  lamicoid('verde-sobre-blanco', 'Verde sobre Blanco', '#00976A', 1500, 2, 1),
-  lamicoid('dorado-brush', 'Dorado Brush', '#C9A13B', 2000, 0, 2),
-  lamicoid('plateado-brush', 'Plateado Brush', '#B8BCC2', 2000, 1, 2),
-  lamicoid('cobre-sobre-negro', 'Cobre sobre Negro', '#C47A55', 2000, 2, 2),
+  lamicoid('negro-sobre-blanco', 'Negro sobre Blanco', '#111111', 1500),
+  lamicoid('amarillo-sobre-negro', 'Amarillo sobre Negro', '#F7D400', 1500),
+  lamicoid('rojo-sobre-blanco', 'Rojo sobre Blanco', '#E30613', 1500),
+  lamicoid('azul-sobre-blanco', 'Azul sobre Blanco', '#0A3CC8', 1500),
+  lamicoid('blanco-sobre-negro', 'Blanco sobre Negro', '#FFFFFF', 1500),
+  lamicoid('verde-sobre-blanco', 'Verde sobre Blanco', '#00976A', 1500),
+  lamicoid('dorado-brush', 'Dorado Brush', '#C9A13B', 2000),
+  lamicoid('plateado-brush', 'Plateado Brush', '#B8BCC2', 2000),
+  lamicoid('cobre-sobre-negro', 'Cobre sobre Negro', '#C47A55', 2000),
   {
     id: 'acrilico-transparente',
     slug: 'acrilico-transparente',

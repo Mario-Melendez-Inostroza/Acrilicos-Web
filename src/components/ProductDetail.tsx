@@ -37,7 +37,7 @@ export default function ProductDetail({ id }: { id: string }) {
         </button>
         <div className="mt-6 grid gap-8 rounded-2xl bg-white p-5 shadow-sm ring-1 ring-black/5 sm:p-8 lg:grid-cols-2 lg:gap-12">
           <div className="grid place-items-center overflow-hidden rounded-xl bg-gradient-to-b from-white to-mist p-6">
-            <ProductImage product={product} className={product.crop ? '' : 'aspect-[4/3] rounded-lg'} />
+            <ProductImage product={product} className={'aspect-[4/3] rounded-lg bg-white'} />
           </div>
           <div className="flex flex-col">
             <p className="text-[12px] font-semibold uppercase tracking-[0.14em] text-gold-deep">
