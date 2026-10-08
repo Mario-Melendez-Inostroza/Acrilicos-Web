@@ -40,7 +40,7 @@ function SearchBox({ onDone }: { onDone?: () => void }) {
         onFocus={() => setFocus(true)}
         onBlur={() => setTimeout(() => setFocus(false), 150)}
         placeholder="Buscar productos..."
-        className="h-10 w-full rounded-full bg-white pl-5 pr-11 text-[13px] text-ink placeholder:text-neutral-400 outline-none ring-gold/60 focus:ring-2"
+        className="h-[clamp(40px,3vw,56px)] w-full rounded-full bg-white pl-5 pr-11 text-[13px] text-ink placeholder:text-neutral-400 outline-none ring-gold/60 focus:ring-2"
       />
       <Search className="pointer-events-none absolute right-4 top-1/2 size-[18px] -translate-y-1/2 text-ink" strokeWidth={2.4} />
       {focus && q && (
@@ -92,12 +92,12 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-white/10 bg-ink/95 text-white backdrop-blur">
-      <div className="container-x flex h-[68px] items-center gap-6">
+      <div className="container-x flex h-[clamp(72px,6vw,120px)] items-center gap-6">
         <button className="-ml-1 p-1 lg:hidden" aria-label="Abrir menú" aria-expanded={menu} onClick={() => setMenu((m) => !m)}>
           {menu ? <X className="size-6" /> : <Menu className="size-6" />}
         </button>
         <a href="#/" onClick={(e) => { e.preventDefault(); nav('inicio') }} className="shrink-0" aria-label="Visionary Enterprises, inicio">
-          <img src="/logo.png" alt="Visionary Enterprises" className="h-11 w-auto max-w-[170px] object-contain" />
+          <img src="/logo.png" alt="Visionary Enterprises" className="h-[clamp(56px,5vw,96px)] w-auto object-contain" />
         </a>
         <nav aria-label="Principal" className="ml-auto hidden h-full items-center gap-10 lg:flex xl:ml-24">
           {LINKS.map((l) => (
@@ -105,7 +105,7 @@ export default function Header() {
               key={l.id}
               href={`#${l.id}`}
               onClick={(e) => { e.preventDefault(); nav(l.id) }}
-              className={`relative flex h-full items-center text-[13px] font-semibold transition-colors hover:text-gold ${active === l.id ? 'text-gold' : ''}`}
+              className={`relative flex h-full items-center text-[clamp(13px,0.8vw,16px)] font-semibold transition-colors hover:text-gold ${active === l.id ? 'text-gold' : ''}`}
             >
               {l.label}
               <span className={`absolute inset-x-0 bottom-0 h-[2px] bg-gold transition-transform duration-300 ${active === l.id ? 'scale-x-100' : 'scale-x-0'}`} />

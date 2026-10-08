@@ -8,8 +8,8 @@
   --color-graphite-2: #222226;
   --color-mist: #f5f5f3;
   --color-line: #e7e7e3;
-  --color-gold: #d4a537;
-  --color-gold-hi: #e4b94c;
+  --color-gold: #e5b34a;
+  --color-gold-hi: #efbb4a;
   --color-gold-deep: #a97f1f;
 }
 
@@ -20,13 +20,13 @@
 }
 
 @layer components {
-  .container-x { @apply mx-auto w-full max-w-[1240px] px-5 sm:px-8; }
+  .container-x { @apply mx-auto w-full max-w-[1600px] px-5 sm:px-[5.5vw]; }
   .btn-gold {
-    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-gold font-bold text-ink transition-all duration-300;
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-gold font-bold text-ink transition-all duration-300;
     background-image: linear-gradient(180deg, var(--color-gold-hi), var(--color-gold));
-    box-shadow: 0 1px 0 rgb(255 255 255 / .35) inset, 0 6px 18px -8px rgb(212 165 55 / .7);
+    box-shadow: 0 1px 0 rgb(255 255 255 / .35) inset, 0 6px 18px -8px rgb(229 179 74 / .7);
   }
-  .btn-gold:hover { @apply -translate-y-px; filter: brightness(1.06); box-shadow: 0 1px 0 rgb(255 255 255 / .35) inset, 0 12px 24px -10px rgb(212 165 55 / .9); }
+  .btn-gold:hover { @apply -translate-y-px; filter: brightness(1.06); box-shadow: 0 1px 0 rgb(255 255 255 / .35) inset, 0 12px 24px -10px rgb(229 179 74 / .9); }
   .btn-gold:active { @apply translate-y-0; }
   .no-scrollbar { scrollbar-width: none; }
   .no-scrollbar::-webkit-scrollbar { display: none; }
