@@ -41,7 +41,7 @@ function SearchBox({ onDone }: { onDone?: () => void }) {
         onChange={(e) => setQ(e.target.value)}
         onFocus={() => setFocus(true)}
         onBlur={() => setTimeout(() => setFocus(false), 150)}
-        placeholder="Buscar productos..."
+       
         className="h-[clamp(40px,3vw,56px)] w-full rounded-full bg-white pl-5 pr-11 text-[13px] text-ink placeholder:text-neutral-400 outline-none ring-gold/60 focus:ring-2"
       />
       <Search className="pointer-events-none absolute right-4 top-1/2 size-[18px] -translate-y-1/2 text-ink" strokeWidth={2.4} />
