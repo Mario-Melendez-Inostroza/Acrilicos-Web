@@ -43,7 +43,7 @@ export default function ProductCard({ product }: { product: Product }) {
           <QuantityStepper size="sm" value={qty} onChange={setQty} label={product.name} />
           <button
             onClick={() => { add(product, variant, qty); setQty(1) }}
-            className="btn-gold group/b h-8 flex-1 whitespace-nowrap px-2 text-[11.5px]"
+            className="btn-gold group/b h-11 flex-1 lg:h-8 whitespace-nowrap px-2 text-[11.5px]"
           >
             <ShoppingCart className="size-4 transition-transform group-hover/b:-rotate-12" strokeWidth={2.4} /> Agregar al carrito
           </button>

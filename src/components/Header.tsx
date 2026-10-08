@@ -93,7 +93,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-white/10 bg-ink/95 text-white backdrop-blur">
       <div className="container-x flex h-[clamp(72px,6vw,120px)] items-center gap-6">
-        <button className="-ml-1 p-1 lg:hidden" aria-label="Abrir menú" aria-expanded={menu} onClick={() => setMenu((m) => !m)}>
+        <button className="-ml-2 grid size-11 place-items-center lg:hidden" aria-label="Abrir menú" aria-expanded={menu} onClick={() => setMenu((m) => !m)}>
           {menu ? <X className="size-6" /> : <Menu className="size-6" />}
         </button>
         <a href="#/" onClick={(e) => { e.preventDefault(); nav('inicio') }} className="shrink-0" aria-label="Visionary Enterprises, inicio">
@@ -114,8 +114,8 @@ export default function Header() {
         </nav>
         <div className="ml-auto hidden w-[200px] md:block lg:ml-auto xl:w-[240px]"><SearchBox /></div>
         <div className="ml-auto flex items-center gap-5 md:ml-0">
-          <button aria-label="Mi cuenta" className="hidden transition-colors hover:text-gold sm:block"><User className="size-6" strokeWidth={2.2} /></button>
-          <button aria-label={`Abrir carrito, ${count} productos`} onClick={open} className="relative transition-colors hover:text-gold">
+          <button aria-label="Mi cuenta" className="hidden size-11 place-items-center transition-colors hover:text-gold sm:grid"><User className="size-6" strokeWidth={2.2} /></button>
+          <button aria-label={`Abrir carrito, ${count} productos`} onClick={open} className="relative grid size-11 place-items-center transition-colors hover:text-gold">
             <ShoppingCart className="size-6" strokeWidth={2.2} />
             <span className="absolute -right-2 -top-2 grid size-[18px] place-items-center rounded-full bg-gold text-[10px] font-extrabold text-ink">{count}</span>
           </button>

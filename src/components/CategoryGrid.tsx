@@ -7,7 +7,7 @@ export default function CategoryGrid() {
   return (
     <section aria-labelledby="cat-title" className="container-x pt-12 sm:pt-14">
       <SectionTitle id="cat-title" a="Nuestras" b="Categorías" sub="Encuentra el material ideal para tu proyecto" />
-      <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-6 grid gap-5 sm:grid-cols-3">
         {getCategories().map((c) => (
           <CategoryCard
             key={c.id}

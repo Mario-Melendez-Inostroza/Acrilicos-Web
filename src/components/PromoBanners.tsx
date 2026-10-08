@@ -25,14 +25,14 @@ const BANNERS = [
 
 export default function PromoBanners() {
   return (
-    <section aria-label="Líneas de acrílico" className="grid gap-1.5 bg-white md:grid-cols-2">
+    <section aria-label="Líneas de acrílico" className="grid gap-1.5 bg-white lg:grid-cols-2">
       {BANNERS.map((b) => (
         <div key={b.category} className="group relative isolate flex min-h-[210px] overflow-hidden bg-graphite text-white">
           <img src={b.image} alt={b.alt} loading="lazy"
             className={`absolute inset-y-0 -z-10 h-full w-[62%] object-cover transition-transform duration-[1.2s] group-hover:scale-105 ${b.imgLeft ? 'left-0' : 'right-0'}`} />
           <div className={`absolute inset-0 -z-10 ${b.imgLeft ? 'bg-gradient-to-l from-graphite from-45% via-graphite/80 via-60% to-graphite/10' : 'bg-gradient-to-r from-graphite from-45% via-graphite/80 via-60% to-graphite/10'}`} />
           <div className={`flex flex-col justify-center px-6 py-7 sm:px-8 ${b.imgLeft ? 'ml-auto w-[62%] lg:w-[50%]' : 'w-[62%] lg:w-[55%]'}`}>
-            <h2 className="text-[22px] font-extrabold uppercase leading-[1.05] sm:text-[26px]">{b.title[0]}<br />{b.title[1]}</h2>
+            <h2 className="text-[22px] font-extrabold uppercase leading-[1.05] sm:text-[26px] lg:text-[22px] xl:text-[26px]">{b.title[0]}<br />{b.title[1]}</h2>
             <ul className="mt-3 space-y-1">
               {b.points.map((p) => (
                 <li key={p} className="flex items-center gap-2 text-[13px] text-white/90"><Check className="size-4 shrink-0 text-white" strokeWidth={3} />{p}</li>

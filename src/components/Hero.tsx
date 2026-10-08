@@ -11,7 +11,7 @@ export default function Hero() {
         alt="Planchas de acrílico y ABS de colores apiladas sobre una superficie oscura"
         className="absolute inset-0 -z-20 h-full w-full object-cover object-right"
       />
-      <div className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,#0b0b0c_0%,#0b0b0c_30%,transparent_55%)] max-md:bg-[linear-gradient(to_right,rgb(11_11_12/.92),rgb(11_11_12/.55))]" />
+      <div className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,#0b0b0c_0%,#0b0b0c_30%,transparent_55%)] max-lg:bg-[linear-gradient(to_right,rgb(11_11_12/.94),rgb(11_11_12/.7)_60%,rgb(11_11_12/.35))]" />
       <div className="container-x py-12 lg:py-[3vw]">
         <div className="lg:w-[52vw]">
           <p className="text-[clamp(0.8rem,1.4vw,1.75rem)] font-medium uppercase tracking-[0.15em] text-gold">Planchas de acrílico y ABS</p>

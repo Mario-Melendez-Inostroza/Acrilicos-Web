@@ -28,7 +28,7 @@ export default function ProductGrid() {
       <div className="container-x">
         <div ref={track} className="no-scrollbar -mx-2 mt-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-2 pb-6 pt-1">
           {products.map((p) => (
-            <div key={p.id} className="w-[78%] shrink-0 snap-start min-[480px]:w-[46%] md:w-[31.5%] lg:w-[calc((100%-3rem)/4)]">
+            <div key={p.id} className="w-[78%] shrink-0 snap-start min-[480px]:w-[46%] md:w-[46%] lg:w-[calc((100%-2rem)/3)] xl:w-[calc((100%-3rem)/4)]">
               <ProductCard product={p} />
             </div>
           ))}
