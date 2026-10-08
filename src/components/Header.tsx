@@ -1,10 +1,7 @@
-import { useEffect, useRef, useState } from 'react'
-import { Menu, Search, ShoppingCart, User, X } from 'lucide-react'
+import { useEffect, useState } from 'react'
+import { Menu, ShoppingCart, User, X } from 'lucide-react'
 import { useCart } from '@/context/CartContext'
-import { searchProducts } from '@/services/productService'
-import { formatCLP } from '@/lib/format'
-import { getMinPrice } from '@/services/productService'
-import { go, goSection } from '@/lib/nav'
+import { goSection } from '@/lib/nav'
 import { getWhatsAppUrl } from '@/config/site'
 import WhatsAppIcon from './WhatsAppIcon'
 
@@ -14,61 +11,6 @@ const LINKS = [
   { id: 'nosotros', label: 'Nosotros' },
   { id: 'contacto', label: 'Contacto' },
 ]
-
-function SearchBox({ onDone }: { onDone?: () => void }) {
-  const [q, setQ] = useState('')
-  const [focus, setFocus] = useState(false)
-  const results = searchProducts(q)
-  const ref = useRef<HTMLFormElement>(null)
-  return (
-    <form
-      ref={ref}
-      role="search"
-      className="relative w-full"
-      onSubmit={(e) => {
-        e.preventDefault()
-        if (results[0]) {
-          go(`#/producto/${results[0].id}`)
-          setQ('')
-          onDone?.()
-        }
-      }}
-    >
-      <label htmlFor="search" className="sr-only">Buscar productos</label>
-      <input
-        id="search"
-        value={q}
-        onChange={(e) => setQ(e.target.value)}
-        onFocus={() => setFocus(true)}
-        onBlur={() => setTimeout(() => setFocus(false), 150)}
-       
-        className="h-[clamp(40px,3vw,56px)] w-full rounded-full bg-white pl-5 pr-11 text-[13px] text-ink placeholder:text-neutral-400 outline-none ring-gold/60 focus:ring-2"
-      />
-      <Search className="pointer-events-none absolute right-4 top-1/2 size-[18px] -translate-y-1/2 text-ink" strokeWidth={2.4} />
-      {focus && q && (
-        <ul className="absolute left-0 right-0 top-12 z-50 overflow-hidden rounded-xl bg-white py-1 shadow-2xl ring-1 ring-black/5">
-          {results.length === 0 && <li className="px-4 py-3 text-sm text-neutral-500">Sin resultados</li>}
-          {results.map((p) => (
-            <li key={p.id}>
-              <button
-                type="button"
-                onMouseDown={() => {
-                  go(`#/producto/${p.id}`)
-                  setQ('')
-                  onDone?.()
-                }}
-                className="flex w-full items-center justify-between gap-3 px-4 py-2.5 text-left text-sm hover:bg-mist"
-              >
-                <span className="font-semibold">{p.name}</span>
-                <span className="text-xs font-bold text-gold-deep">{formatCLP(getMinPrice(p))}</span>
-              </button>
-            </li>
-          ))}
-        </ul>
-      )}
-    </form>
-  )
-}
 
 export default function Header() {
   const { count, open } = useCart()
@@ -101,7 +43,7 @@ export default function Header() {
         <a href="#/" onClick={(e) => { e.preventDefault(); nav('inicio') }} className="shrink-0" aria-label="Visionary Enterprises, inicio">
           <img src="/images/logo.png" alt="Visionary Enterprises" className="h-[clamp(56px,5vw,96px)] w-auto object-contain" />
         </a>
-        <nav aria-label="Principal" className="ml-auto hidden h-full items-center gap-6 lg:flex xl:ml-12 xl:gap-8 2xl:ml-24 2xl:gap-10">
+        <nav aria-label="Principal" className="hidden h-full items-center gap-6 lg:ml-8 lg:flex xl:ml-12 xl:gap-8 2xl:ml-24 2xl:gap-10">
           {LINKS.map((l) => (
             <a
               key={l.id}
@@ -124,8 +66,7 @@ export default function Header() {
           <WhatsAppIcon className="size-6 shrink-0" />
           <span className="hidden whitespace-nowrap xl:inline">¿Tienes dudas?</span>
         </a>
-        <div className="ml-auto hidden w-[190px] shrink-0 md:block lg:ml-0 xl:w-[220px]"><SearchBox /></div>
-        <div className="ml-auto flex items-center gap-5 md:ml-0">
+        <div className="ml-auto flex items-center gap-5 lg:ml-0">
           <button aria-label="Mi cuenta" className="hidden size-11 place-items-center transition-colors hover:text-gold sm:grid"><User className="size-6" strokeWidth={2.2} /></button>
           <button aria-label={`Abrir carrito, ${count} productos`} onClick={open} className="relative grid size-11 place-items-center transition-colors hover:text-gold">
             <ShoppingCart className="size-6" strokeWidth={2.2} />
@@ -136,7 +77,6 @@ export default function Header() {
       {menu && (
         <div className="border-t border-white/10 bg-ink lg:hidden">
           <div className="container-x flex flex-col gap-1 py-4">
-            <div className="mb-3 md:hidden"><SearchBox onDone={() => setMenu(false)} /></div>
             {LINKS.map((l) => (
               <a key={l.id} href={`#${l.id}`} onClick={(e) => { e.preventDefault(); nav(l.id) }}
                 className={`rounded-lg px-3 py-3 text-sm font-semibold uppercase tracking-wide hover:bg-white/5 ${active === l.id ? 'text-gold' : ''}`}>
