@@ -92,7 +92,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-white/10 bg-ink/95 text-white backdrop-blur">
-      <div className="container-x flex h-[clamp(72px,6vw,120px)] items-center gap-6">
+      <div className="container-x flex h-[calc(var(--header-h)-1px)] items-center gap-6">
         <button className="-ml-2 grid size-11 place-items-center lg:hidden" aria-label="Abrir menú" aria-expanded={menu} onClick={() => setMenu((m) => !m)}>
           {menu ? <X className="size-6" /> : <Menu className="size-6" />}
         </button>

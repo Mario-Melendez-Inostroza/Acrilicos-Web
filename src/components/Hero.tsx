@@ -5,11 +5,11 @@ import WhatsAppIcon from './WhatsAppIcon'
 
 export default function Hero() {
   return (
-    <section id="inicio" className="relative isolate flex min-h-[clamp(480px,33vw,680px)] items-center overflow-hidden bg-[#0b0b0c] text-white">
+    <section id="inicio" className="relative isolate flex min-h-[calc(100svh-var(--header-h))] items-center overflow-hidden bg-[#0b0b0c] text-white">
       <img
         src="/img/hero-fondo.png"
         alt="Planchas de acrílico y ABS de colores apiladas sobre una superficie oscura"
-        className="absolute inset-0 -z-20 h-full w-full object-cover object-right"
+        className="hero-bg-img -z-20"
       />
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,#0b0b0c_0%,#0b0b0c_30%,transparent_55%)] max-lg:bg-[linear-gradient(to_right,rgb(11_11_12/.94),rgb(11_11_12/.7)_60%,rgb(11_11_12/.35))]" />
       <div className="container-x py-12 lg:py-[3vw]">

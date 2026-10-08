@@ -14,6 +14,7 @@
 }
 
 @layer base {
+  :root { --header-h: calc(clamp(72px, 6vw, 120px) + 1px); }
   html { scroll-behavior: smooth; }
   body { @apply bg-white font-sans text-ink antialiased; }
   h1, h2 { letter-spacing: -0.02em; }
@@ -30,4 +31,15 @@
   .btn-gold:active { @apply translate-y-0; }
   .no-scrollbar { scrollbar-width: none; }
   .no-scrollbar::-webkit-scrollbar { display: none; }
+}
+
+/* Fondo del hero: cover; en monitores altos se mantiene la proporción y se funde con el negro */
+.hero-bg-img { position: absolute; top: 50%; right: 0; width: 100%; height: 100%; transform: translateY(-50%); object-fit: cover; object-position: right center; }
+@media (min-width: 1024px) and (max-aspect-ratio: 1/1) {
+  .hero-bg-img {
+    height: auto;
+    aspect-ratio: 1983 / 793;
+    -webkit-mask-image: linear-gradient(to bottom, transparent, #000 22%, #000 78%, transparent);
+    mask-image: linear-gradient(to bottom, transparent, #000 22%, #000 78%, transparent);
+  }
 }

@@ -3,7 +3,7 @@ import { chromium } from 'playwright'
 
 const prefix = process.argv[2] || 'despues'
 const url = process.argv[3] || 'http://localhost:5199/'
-const sizes = [[1920, 1080], [1440, 900], [1024, 768], [768, 1024], [375, 812]]
+const sizes = [[1920, 1080], [1440, 900], [1366, 768], [1024, 768], [768, 1024], [375, 812], [375, 700], [1280, 1400]]
 
 const browser = await chromium.launch()
 for (const [w, h] of sizes) {
@@ -39,6 +39,8 @@ for (const [w, h] of sizes) {
       h1Lines: lines.size,
       h1Width: Math.round(r(h1).width),
       btnBottoms: btns,
+      benefitsTop: Math.round(r(q('#inicio').nextElementSibling).top),
+      vh: window.innerHeight,
       scrollW: document.documentElement.scrollWidth,
     }
   })
