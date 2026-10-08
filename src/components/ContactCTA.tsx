@@ -1,4 +1,4 @@
-import { whatsappLink } from '@/config/site'
+import { getWhatsAppUrl } from '@/config/site'
 import WhatsAppIcon from './WhatsAppIcon'
 
 export default function ContactCTA() {
@@ -9,7 +9,7 @@ export default function ContactCTA() {
           <h2 id="cta-title" className="text-[20px] font-extrabold uppercase sm:text-[22px]">¿Tienes un proyecto?</h2>
           <p className="mt-1 text-[13px] text-white/85">Te ayudamos a encontrar el material ideal. Escríbenos y recibe asesoría personalizada.</p>
         </div>
-        <a href={whatsappLink()} target="_blank" rel="noreferrer" className="btn-gold h-12 shrink-0 rounded-full px-8 text-[13px]">
+        <a href={getWhatsAppUrl('Hola, quiero cotizar materiales para mi proyecto.')} target="_blank" rel="noopener noreferrer" className="btn-gold h-12 shrink-0 rounded-full px-8 text-[13px]">
           <WhatsAppIcon /> Contactar por WhatsApp
         </a>
       </div>

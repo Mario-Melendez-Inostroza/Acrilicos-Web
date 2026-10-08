@@ -53,7 +53,7 @@ export default function Footer() {
           <a href={site.social.youtube} aria-label="YouTube" className="hover:text-gold"><Youtube className="size-5" /></a>
         </div>
       </div>
-      <div className="container-x flex flex-col gap-2 border-t border-white/10 py-4 text-[11px] text-white/60 sm:flex-row sm:justify-between">
+      <div className="container-x flex flex-col gap-2 border-t border-white/10 py-4 max-sm:pb-20 text-[11px] text-white/60 sm:flex-row sm:justify-between">
         <p>© {new Date().getFullYear()} Visionary Enterprises. Todos los derechos reservados.</p>
         <p className="flex gap-3"><a href="#" className="hover:text-gold">Términos y condiciones</a><span aria-hidden="true">|</span><a href="#" className="hover:text-gold">Política de privacidad</a></p>
       </div>

@@ -3,7 +3,7 @@ import { ArrowLeft, ShoppingCart } from 'lucide-react'
 import type { Variant } from '@/data/products'
 import { useCart } from '@/context/CartContext'
 import { getDefaultVariant, getPrice, getProductById, getProductsByCategory } from '@/services/productService'
-import { whatsappLink } from '@/config/site'
+import { getWhatsAppUrl } from '@/config/site'
 import { formatCLP } from '@/lib/format'
 import { go, goSection } from '@/lib/nav'
 import ProductImage from './ProductImage'
@@ -57,7 +57,7 @@ export default function ProductDetail({ id }: { id: string }) {
                 <ShoppingCart className="size-5" strokeWidth={2.4} /> Agregar al carrito
               </button>
             </div>
-            <a href={whatsappLink(`Hola, quiero consultar por ${product.name}${variant ? ` (${variant.label})` : ''}.`)} target="_blank" rel="noreferrer"
+            <a href={getWhatsAppUrl(`Hola, quiero consultar por ${product.name}${variant ? ` (${variant.label})` : ''}.`)} target="_blank" rel="noreferrer"
               className="mt-4 inline-flex items-center gap-2 text-[13px] font-semibold text-neutral-600 hover:text-gold-deep">
               <WhatsAppIcon className="size-4" /> Consultar por WhatsApp
             </a>

@@ -5,6 +5,8 @@ import { searchProducts } from '@/services/productService'
 import { formatCLP } from '@/lib/format'
 import { getMinPrice } from '@/services/productService'
 import { go, goSection } from '@/lib/nav'
+import { getWhatsAppUrl } from '@/config/site'
+import WhatsAppIcon from './WhatsAppIcon'
 
 const LINKS = [
   { id: 'inicio', label: 'Inicio' },
@@ -99,7 +101,7 @@ export default function Header() {
         <a href="#/" onClick={(e) => { e.preventDefault(); nav('inicio') }} className="shrink-0" aria-label="Visionary Enterprises, inicio">
           <img src="/logo.png" alt="Visionary Enterprises" className="h-[clamp(56px,5vw,96px)] w-auto object-contain" />
         </a>
-        <nav aria-label="Principal" className="ml-auto hidden h-full items-center gap-10 lg:flex xl:ml-24">
+        <nav aria-label="Principal" className="ml-auto hidden h-full items-center gap-6 lg:flex xl:ml-12 xl:gap-8 2xl:ml-24 2xl:gap-10">
           {LINKS.map((l) => (
             <a
               key={l.id}
@@ -112,7 +114,17 @@ export default function Header() {
             </a>
           ))}
         </nav>
-        <div className="ml-auto hidden w-[200px] md:block lg:ml-auto xl:w-[240px]"><SearchBox /></div>
+        <a
+          href={getWhatsAppUrl('Hola, tengo dudas sobre sus productos.')}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="¿Tienes dudas? Escríbenos por WhatsApp"
+          className="ml-auto hidden size-11 shrink-0 items-center justify-center gap-2.5 rounded-full bg-[#25D366] text-[14px] font-bold text-white shadow-[0_1px_2px_rgba(0,0,0,.2)] transition-colors hover:bg-[#1EBE5A] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white lg:inline-flex xl:w-auto xl:px-5"
+        >
+          <WhatsAppIcon className="size-6 shrink-0" />
+          <span className="hidden whitespace-nowrap xl:inline">¿Tienes dudas?</span>
+        </a>
+        <div className="ml-auto hidden w-[190px] shrink-0 md:block lg:ml-0 xl:w-[220px]"><SearchBox /></div>
         <div className="ml-auto flex items-center gap-5 md:ml-0">
           <button aria-label="Mi cuenta" className="hidden size-11 place-items-center transition-colors hover:text-gold sm:grid"><User className="size-6" strokeWidth={2.2} /></button>
           <button aria-label={`Abrir carrito, ${count} productos`} onClick={open} className="relative grid size-11 place-items-center transition-colors hover:text-gold">

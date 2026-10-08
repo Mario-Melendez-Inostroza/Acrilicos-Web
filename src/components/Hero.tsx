@@ -1,5 +1,5 @@
 import { ArrowRight } from 'lucide-react'
-import { whatsappLink } from '@/config/site'
+import { getWhatsAppUrl } from '@/config/site'
 import { goSection } from '@/lib/nav'
 import WhatsAppIcon from './WhatsAppIcon'
 
@@ -27,7 +27,7 @@ export default function Hero() {
             <button onClick={() => goSection('productos')} className="btn-gold group h-[clamp(48px,3.5vw,72px)] rounded-full px-[2.2vw] text-[clamp(0.875rem,1.1vw,1.375rem)] max-lg:px-7">
               Ver productos <ArrowRight className="size-[1.2em] transition-transform group-hover:translate-x-1" strokeWidth={2.6} />
             </button>
-            <a href={whatsappLink()} target="_blank" rel="noreferrer"
+            <a href={getWhatsAppUrl('Hola, quiero cotizar materiales para mi proyecto.')} target="_blank" rel="noopener noreferrer"
               className="inline-flex h-[clamp(48px,3.5vw,72px)] items-center gap-2.5 rounded-full border-[1.5px] border-white/80 px-[2vw] text-[clamp(0.875rem,1.1vw,1.375rem)] font-bold transition-colors hover:border-gold hover:text-gold max-lg:px-6">
               <WhatsAppIcon /> Contactar por WhatsApp
             </a>

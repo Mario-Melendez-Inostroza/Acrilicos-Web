@@ -10,6 +10,7 @@ import PromoBanners from '@/components/PromoBanners'
 import About from '@/components/About'
 import ContactCTA from '@/components/ContactCTA'
 import Footer from '@/components/Footer'
+import WhatsAppFloat from '@/components/WhatsAppFloat'
 import CartDrawer from '@/components/CartDrawer'
 import ProductDetail from '@/components/ProductDetail'
 import Checkout from '@/components/Checkout'
@@ -42,6 +43,7 @@ export default function App() {
       {route.name === 'home' && <ContactCTA />}
       <Footer />
       <CartDrawer />
+      <WhatsAppFloat />
     </CartProvider>
   )
 }

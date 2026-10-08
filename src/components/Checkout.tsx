@@ -49,7 +49,7 @@ export default function Checkout() {
 
   return (
     <div className="bg-mist">
-      <div className="container-x py-8 sm:py-12">
+      <div className="container-x pb-28 pt-8 sm:pt-12 lg:pb-12">
         <button onClick={() => go('#/')} className="inline-flex items-center gap-2 text-[13px] font-semibold text-neutral-600 hover:text-ink"><ArrowLeft className="size-4" /> Seguir comprando</button>
         <h1 className="mt-4 text-[32px] font-black uppercase sm:text-[40px]">Finalizar <span className="text-gold">compra</span></h1>
         {lines.length === 0 ? (
