@@ -5,7 +5,7 @@ export default function About() {
     <section id="nosotros" aria-labelledby="about-title" className="scroll-mt-20 bg-white py-10 sm:py-12">
       <div className="container-x grid items-center gap-8 md:grid-cols-[1fr_1.05fr] lg:gap-12">
         <div className="overflow-hidden rounded-md shadow-[0_20px_40px_-20px_rgb(0_0_0/0.5)]">
-          <img src="/img/nosotros.png" alt="Logo dorado de Visionary Enterprises instalado en una pared negra" loading="lazy"
+          <img src="/img/nosotros-logo-pared.png" alt="Logo dorado de Visionary Enterprises instalado en una pared negra" loading="lazy"
             className="aspect-[2.5/1] w-full object-cover" />
         </div>
         <div>

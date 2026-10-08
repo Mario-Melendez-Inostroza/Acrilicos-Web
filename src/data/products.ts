@@ -45,28 +45,28 @@ export const categories: CategoryInfo[] = [
     id: 'lamicoid',
     name: 'Lamicoid (ABS Doble Color)',
     description: '9 variedades disponibles',
-    image: '/img/lamicoid.png',
+    image: '/img/categoria-lamicoid.png',
     alt: 'Pila de planchas de Lamicoid ABS doble color en negro, amarillo, rojo, azul, verde, dorado, plateado y cobre',
   },
   {
     id: 'transparente',
     name: 'Acrílico Transparente',
     description: 'Desde 2mm a 10mm',
-    image: '/img/transparente.png',
+    image: '/img/categoria-acrilico-transparente.png',
     alt: 'Planchas de acrílico transparente apiladas de distintos espesores',
   },
   {
     id: 'colores',
     name: 'Acrílicos de Colores',
     description: 'Gran variedad de colores',
-    image: '/img/colores.png',
+    image: '/img/categoria-acrilicos-colores.png',
     alt: 'Planchas de acrílico de colores translúcidos apiladas en degradé',
   },
 ]
 
 const LAMICOID_DESC =
   'Plancha de ABS doble color (Lamicoid), ideal para señalética, placas, credenciales y grabado.'
-const CATALOG = '/img/catalog.png'
+const CATALOG = '/img/catalogo-lamicoid.png'
 const COLS = [30, 537, 1044]
 const ROWS = [12, 352, 692]
 
@@ -110,7 +110,7 @@ export const products: Product[] = [
     category: 'transparente',
     description: 'Plancha de acrílico transparente de alta claridad. Elige el espesor que necesita tu proyecto.',
     dimensions: '2440 x 1220 mm',
-    image: '/img/transparente.png',
+    image: '/img/categoria-acrilico-transparente.png',
     variantType: 'thickness',
     variants: [
       { id: '2mm', label: '2 mm', price: 3000, isTestPrice: true },
@@ -130,7 +130,7 @@ export const products: Product[] = [
     category: 'colores',
     description: 'Plancha de acrílico de color de 3 mm. Elige el color para tu proyecto.',
     dimensions: '2440 x 1220 x 3 mm',
-    image: '/img/colores.png',
+    image: '/img/categoria-acrilicos-colores.png',
     variantType: 'color',
     // PLACEHOLDER: reemplazar por los colores reales disponibles
     variants: [

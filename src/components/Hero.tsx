@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section id="inicio" className="relative isolate overflow-hidden bg-ink text-white">
       <img
-        src="/img/hero.png"
+        src="/img/hero-fondo.png"
         alt="Planchas de acrílico y ABS de colores apiladas sobre una superficie oscura"
         className="absolute inset-0 -z-10 h-full w-full object-cover object-[70%_center]"
       />
