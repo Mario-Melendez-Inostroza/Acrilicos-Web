@@ -1,0 +1,10 @@
+{
+  "description": "Discover premium acrylic and ABS sheets for professional projects at Visionary Enterprises, featuring secure payment and personalized assistance.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
